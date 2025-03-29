@@ -65,3 +65,27 @@ const insertData = async (data) => {
 
 // Run the function
 importCsvData("C:\\Users\\ws_htu1065\\Downloads\\backend-nodejs\\data.csv");
+
+///db
+// create database readcsv;
+// use readcsv;
+// select * from users;
+// DROP TABLE IF EXISTS events;
+// DELETE FROM users WHERE id = 41;
+
+// CREATE TABLE events (
+//     timestamp VARCHAR(255),
+//     eventName VARCHAR(255),
+//     MSISDN VARCHAR(20),
+//     ip VARCHAR(50),
+//     crName VARCHAR(255),
+//     classIdentifier VARCHAR(255),
+//     maxUploadBitRate FLOAT,
+//     maxDownloadBitRate FLOAT,
+//     fup_to_full VARCHAR(255),
+//     full_to_fup VARCHAR(255),
+//     fup_status VARCHAR(255),
+//     multisim_flag VARCHAR(255)
+// );
+// TRUNCATE TABLE events;
+// select distinct MSISDN from events limit 100 offset 200;
