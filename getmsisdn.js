@@ -9,7 +9,7 @@ const authMiddleware = require("./middleware/auth");
 const app = express();
 const port = process.env.SERVER_PORT;
 
-app.use(cors({ origin: "http://localhost:13.60.236.60" }));
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.json({ limit: "300mb" }));
 app.use(bodyParser.json({ limit: "300mb" }));
 
