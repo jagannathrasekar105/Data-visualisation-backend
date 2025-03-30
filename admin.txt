@@ -1,0 +1,6 @@
+admin
+datav.cjimqy0oeso9.eu-north-1.rds.amazonaws.com
+password105
+1616
+admin
+instance public ip:13.49.67.180
