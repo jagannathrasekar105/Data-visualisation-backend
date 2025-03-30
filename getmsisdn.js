@@ -8,7 +8,7 @@ const pool = require("./db");
 const authMiddleware = require("./middleware/auth");
 
 const app = express();
-const port = 3001;
+const port = process.env.SERVER_PORT;
 
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json({ limit: "300mb" }));
@@ -186,7 +186,8 @@ app.post("/api/getLatestDataByMSISDNs", authMiddleware, async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+console.log(`Running on Node.js version: ${process.version}`);
 
-app.listen(port, () => {
-  console.log(`🚀 Server running on http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`🚀 Server running on :${port} and ${process.env.DB_HOST}`);
 });
